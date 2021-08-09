@@ -1,0 +1,341 @@
+/* Helpers */
+/* Library */
+/**
+ * @file
+ * This file is used to get things started.
+ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,700");
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+/**
+ * @file
+ * This file lists the breakpoints that we are going to use in the theme.
+ */
+/**
+ * @file
+ * This file lists the colours that we are going to use in the theme.
+ *
+ * Please keep the number of colours to a minimum for sake of maintainability.
+ *
+ * If using greys, let's not have 50 shades of them.
+ *
+ * We put a prefix on all our colours here so they show
+ * up beside each other when typing '$c-...' in Atom with the Pigments
+ * plugin.
+ */
+/* Theme Colours */
+/* Greys */
+/**
+ * @file
+ * This file lists/imports the fonts that we are going to use in the theme.
+ */
+/**
+ * @file
+ * This file lists/imports the mixins that we have created for the theme.
+ */
+/**
+ * @file
+ * This file lists/imports the extends that we have created for the theme.
+ */
+.centered-xy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center; }
+
+/**
+ * @file
+ * This file creates the out layout of the site and all the regions.
+ */
+/* The Layout Contained class is a handy one for wrapper around all elements
+that we want to have centered on the page, but also want them to have 100%
+width backgrounds so we can put a full widh background colour on them.
+
+For example, you might want a 100% width red background on the navigation,
+but want the menu links 'contained' within the width of the content area. */
+.layout-contained {
+  max-width: 1200px;
+  margin: auto; }
+  @media (min-width: 961px) {
+    .layout-contained__inner {
+      padding: 0 10%; } }
+
+@media (min-width: 961px) {
+  .layout-10-centered {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 83.3333%; } }
+
+@media (min-width: 961px) {
+  .layout-6-centered {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 49.99998%; } }
+
+.padding {
+  padding: 0 1rem; }
+
+/**
+ * @file
+ * This file creates helper classes that can be added to items to show/hide
+ * them depending on the screen width being viewed.
+ */
+@media (min-width: 601px) {
+  .small-screen-only {
+    display: none; } }
+
+@media (min-width: 961px) {
+  .small-screen-only {
+    display: none; } }
+
+@media (min-width: 961px) {
+  .small-medium-screen-only {
+    display: none; } }
+
+.large-screen-only {
+  display: none; }
+  @media (min-width: 961px) {
+    .large-screen-only {
+      display: block; } }
+
+.large-medium-screen-only {
+  display: none; }
+  @media (min-width: 601px) {
+    .large-medium-screen-only {
+      display: block; } }
+
+/* Elements */
+/**
+ * @file
+ * This file creates the styling for the a elements.
+ */
+a {
+  color: #111111;
+  text-decoration: none; }
+  a:focus, a:hover {
+    text-decoration: underline; }
+
+/**
+ * @file
+ * This file is used to style blockquotes.
+ */
+blockquote {
+  margin-bottom: 1.5rem;
+  margin-top: 0rem; }
+
+/**
+ * @file
+ * This file creates the styling for the body element.
+ */
+body {
+  margin: 0;
+  overflow-x: hidden; }
+
+/**
+ * @file
+ * This file creates the styling for the h elements.
+ */
+.heading {
+  font-family: Roboto, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-weight: 600; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111111;
+  font-family: Roboto, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-weight: 600; }
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    color: #111111; }
+
+h1, .alpha {
+  font-size: 23.49px;
+  line-height: 1.5rem;
+  margin-bottom: .75rem;
+  margin-top: 0rem; }
+  @media (min-width: 961px) {
+    h1, .alpha {
+      font-size: 46.98px;
+      line-height: 3rem;
+      margin-bottom: 1.5rem;
+      margin-top: 0rem; } }
+
+h2, .beta {
+  font-size: 14.49px;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0rem; }
+  @media (min-width: 961px) {
+    h2, .beta {
+      font-size: 28.98px; } }
+
+h3, .gamma {
+  font-size: 12.85714px;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0rem; }
+  @media (min-width: 961px) {
+    h3, .gamma {
+      font-size: 22.5px; } }
+
+h4, .delta {
+  font-size: 10.28571px;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0rem; }
+  @media (min-width: 961px) {
+    h4, .delta {
+      font-size: 18px; } }
+
+h5, .epsilon {
+  font-size: 10.28571px;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0rem; }
+  @media (min-width: 961px) {
+    h5, .epsilon {
+      font-size: 18px; } }
+
+h6, .zeta {
+  font-size: 7.65px;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0rem; }
+  @media (min-width: 961px) {
+    h6, .zeta {
+      font-size: 15.3px; } }
+
+/**
+ * @file
+ * This file creates the styling for the html element.
+ */
+html {
+  font-family: Roboto, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px; }
+
+/**
+ * @file
+ * This file is used to style the img tag.
+ */
+img {
+  height: auto;
+  max-width: 100%; }
+
+/**
+ * @file
+ * This file is used to style p tags.
+ */
+p {
+  margin-bottom: 1.5rem;
+  margin-top: 0rem; }
+
+/**
+ * @file
+ * This file creates the styling for the table element.
+ */
+table {
+  margin-bottom: 1.5rem;
+  margin-top: 0rem; }
+
+/**
+ * @file
+ * This file is used to style the list items.
+ */
+ul, ol {
+  margin-bottom: 1.5rem;
+  margin-top: 0rem; }
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-bottom: 0rem;
+  margin-top: 0rem; }
+
+/* Regions */
+/**
+ * @file
+ * This file that creates the CSS for the footer region.
+ */
+.footer {
+  clear: both; }
+
+/**
+ * @file
+ * This file that creates the CSS for the header region.
+ */
+.header {
+  padding: 27px 0; }
+
+.header__inner {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+@media (min-width: 961px) {
+  .header nav {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+    margin-left: auto; } }
+
+@media (min-width: 961px) {
+  .header .menu {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; } }
+
+.header .menu-item {
+  list-style: none; }
+
+/**
+ * @file
+ * This file that creates the CSS for the notices region.
+ */
+.notices {
+  background: #eaeaea;
+  padding: 27px 0; }
+
+.notices__inner {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+/* Classes */

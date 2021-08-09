@@ -1,0 +1,31 @@
+/**
+ * @file
+ * This file that creates the CSS for the header region.
+ */
+
+.header {
+  padding: $base-line-height 0;
+}
+
+.header__inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header nav {
+  @include breakpoint($large) {
+    flex-basis: 50%;
+    margin-left: auto;
+  }
+}
+.header .menu {
+  @include breakpoint($large) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.header .menu-item {
+  list-style: none;
+}
